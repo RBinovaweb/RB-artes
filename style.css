@@ -1,0 +1,238 @@
+/* Fundo com imagem de madeira */
+body {
+  background-image: url('imagens/fundo-madeira.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.fundo {
+  background-color: rgba(0, 0, 0, 0.7);
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li a {
+  color: #f4c56e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Banner */
+.banner {
+  text-align: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.banner h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  padding: 20px;
+  color: #fff;
+}
+
+.categoria h3 {
+  color: #f4c56e;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+.produto img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.produto h4 {
+  margin-top: 10px;
+  color: #f4c56e;
+}
+
+.produto span {
+  font-weight: bold;
+  color: #fff;
+}
+
+button.comprar {
+  background-color: #f4c56e;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button.comprar:hover {
+  background-color: #e5b94f;
+}
+
+/* Carrinho flutuante */
+.carrinho-flutuante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-width: 300px;
+  display: none;
+  z-index: 9999;
+}
+
+.carrinho-flutuante h4 {
+  margin-top: 0;
+  color: #f4c56e;
+}
+
+.carrinho-flutuante button {
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Formulário */
+#formulario-endereco {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  z-index: 10000;
+}
+#formulario-endereco input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+#formulario-endereco button {
+  margin-top: 10px;
+  background-color: #f4c56e;
+  color: black;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Contato */
+.contato {
+  padding: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.contato a.whatsapp {
+  background-color: #25d366;
+  padding: 15px 30px;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.footer-grid div {
+  margin: 10px;
+}
+.footer-grid img {
+  height: 30px;
+  margin: 0 5px;
+}
+footer p.copy {
+  margin: 0;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Botão voltar ao topo */
+.btn-topo {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f4c56e;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .produto {
+    width: 90%;
+  }
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

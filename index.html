@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RB-ARTES - Tábuas e Acessórios</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .carrinho-flutuante {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #333;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      max-width: 300px;
+      display: none;
+      z-index: 9999;
+    }
+    .carrinho-flutuante h4 {
+      margin-top: 0;
+      color: #f4c56e;
+    }
+    .carrinho-flutuante ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    .carrinho-flutuante button {
+      background: #25d366;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    #formulario-endereco {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      z-index: 10000;
+    }
+    #formulario-endereco input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+    #formulario-endereco button {
+      margin-top: 10px;
+      background-color: #f4c56e;
+      color: black;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="fundo">
+    <header>
+      <h1>🔥 TABUAS ARTESANAL 🔪</h1>
+      <nav>
+        <ul>
+          <li><a href="#tabuas">Tábuas</a></li>
+          <li><a href="#facas">Facas</a></li>
+          <li><a href="#kits">Kits</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="banner">
+      <h2>Estilo & Qualidade no Seu Churrasco</h2>
+      <p>Transforme o churrasco em experiência com nossos produtos de alto padrão feitos a mão</p>
+    </section>
+
+    <main>
+      <section id="tabuas" class="categoria">
+        <h3>Tábuas Premium</h3>
+        <div class="grid">
+          <div class="produto">
+            <img src="tabua1.jpg" alt="Tábua Premium">
+            <h4>Tábua de Carvalho</h4>
+            <p>Com canaleta e alça de couro.</p>
+            <span>R$ 249,90</span><br><button class="comprar" data-item="Tábua de Carvalho - R$ 249,90">Adicionar ao Carrinho</button>
+          </div>
+          <div class="produto">
+            <img src="tabua2.jpg" alt="Tábua Personalizada">
+            <h4>Personalizada a Laser</h4>
+            <p>Nome ou logo gravado.</p>
+            <span>R$ 299,90</span><br><button class="comprar" data-item="Tábua Personalizada - R$ 299,90">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="facas" class="categoria">
+        <h3>Facas Artesanais</h3>
+        <div class="grid">
+          <div class="produto">
+            <img src="faca1.jpg" alt="Faca de Aço Carbono">
+            <h4>Aço Carbono</h4>
+            <p>Faca artesanal com cabo de madeira nobre.</p>
+            <span>R$ 189,90</span><br><button class="comprar" data-item="Faca Aço Carbono - R$ 189,90">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="kits" class="categoria">
+        <h3>Kits Completos</h3>
+        <div class="grid">
+          <div class="produto">
+            <img src="kit1.jpg" alt="Kit completo churrasco">
+            <h4>Kit Rei do Churrasco</h4>
+            <p>Tábua + faca + garfo + estojo de couro.</p>
+            <span>R$ 449,90</span><br><button class="comprar" data-item="Kit Rei do Churrasco - R$ 449,90">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="contato" class="contato">
+      <h3>Fale Conosco</h3>
+      <p>Peça pelo WhatsApp ou preencha o formulário:</p>
+      <a class="whatsapp" href="https://wa.me/27997540093" target="_blank">📲 Chamar no WhatsApp</a>
+    </section>
+
+    <footer>
+      <div class="footer-grid">
+        <div>
+          <h4>Redes Sociais</h4>
+          <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="imagens/facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+        <div>
+          <h4>Endereço</h4>
+          <p>Rua do Churrasco, 123 - São Paulo - SP</p>
+        </div>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#tabuas">Tábuas</a></li>
+            <li><a href="#facas">Facas</a></li>
+            <li><a href="#kits">Kits</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">&copy; 2025 RB-ARTES. Todos os direitos reservados.</p>
+    </footer>
+
+    <div class="carrinho-flutuante" id="carrinho">
+      <h4>Seu Carrinho</h4>
+      <ul id="lista-carrinho"></ul>
+      <button onclick="finalizarCompra()">Finalizar Pedido</button>
+    </div>
+
+    <div id="formulario-endereco">
+      <h4>Informe seu Endereço</h4>
+      <input id="nome" placeholder="Nome completo">
+      <input id="endereco" placeholder="Endereço completo">
+      <input id="telefone" placeholder="Telefone">
+      <button onclick="enviarWhatsapp()">Enviar Pedido via WhatsApp</button>
+    </div>
+
+    <script>
+      const carrinho = [];
+      document.querySelectorAll('.comprar').forEach(btn => {
+        btn.addEventListener('click', () => {
+          carrinho.push(btn.getAttribute('data-item'));
+          atualizarCarrinho();
+        });
+      });
+
+      function atualizarCarrinho() {
+        const lista = document.getElementById('lista-carrinho');
+        lista.innerHTML = '';
+        carrinho.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          lista.appendChild(li);
+        });
+        document.getElementById('carrinho').style.display = 'block';
+      }
+
+      function finalizarCompra() {
+        document.getElementById('formulario-endereco').style.display = 'block';
+      }
+
+      function enviarWhatsapp() {
+        const nome = document.getElementById('nome').value;
+        const endereco = document.getElementById('endereco').value;
+        const telefone = document.getElementById('telefone').value;
+        const pedido = carrinho.join(', ');
+
+        const mensagem = `Olá! Meu nome é ${nome}.\nPedido: ${pedido}\nEndereço: ${endereco}\nTelefone: ${telefone}`;
+        const url = `https://wa.me/27997540093?text=${encodeURIComponent(mensagem)}`;
+        window.open(url, '_blank');
+      }
+    </script>
+  </div>
+</body>
+</html>
