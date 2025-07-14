@@ -3,170 +3,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RB-ARTES - Tábuas e Acessórios</title>
+  <title>RB-ARTES - Tábuas Artesanais</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .carrinho-flutuante {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #333;
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      max-width: 300px;
-      display: none;
-      z-index: 9999;
-    }
-    .carrinho-flutuante h4 {
-      margin-top: 0;
-      color: #f4c56e;
-    }
-    .carrinho-flutuante ul {
-      padding-left: 20px;
-      margin-bottom: 10px;
-    }
-    .carrinho-flutuante button {
-      background: #25d366;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    #formulario-endereco {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      color: white;
-      z-index: 10000;
-    }
-    #formulario-endereco input {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 8px;
-      border-radius: 5px;
-      border: none;
-    }
-    #formulario-endereco button {
-      margin-top: 10px;
-      background-color: #f4c56e;
-      color: black;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
   <div class="fundo">
     <header>
-      <h1>🔥 TABUAS ARTESANAL 🔪</h1>
-      <nav>
-        <ul>
-          <li><a href="#tabuas">Tábuas</a></li>
-          <li><a href="#facas">Facas</a></li>
-          <li><a href="#kits">Kits</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
+      <h1>🔥 RB ARTES🔪</h1>
     </header>
-
     <section class="banner">
-      <h2>Estilo & Qualidade no Seu Churrasco</h2>
-      <p>Transforme o churrasco em experiência com nossos produtos de alto padrão feitos a mão</p>
+      <h2>As Melhores Tábuas Artesanais</h2>
+      <p>Escolha a que mais combina com seu estilo de churrasco.</p>
     </section>
-
     <main>
       <section id="tabuas" class="categoria">
         <h3>Tábuas Premium</h3>
-        <div class="grid">
-          <div class="produto">
-            <img src="tabua1.jpg" alt="Tábua Premium">
-            <h4>Tábua de Carvalho</h4>
-            <p>Com canaleta e alça de couro.</p>
-            <span>R$ 249,90</span><br><button class="comprar" data-item="Tábua de Carvalho - R$ 249,90">Adicionar ao Carrinho</button>
-          </div>
-          <div class="produto">
-            <img src="tabua2.jpg" alt="Tábua Personalizada">
-            <h4>Personalizada a Laser</h4>
-            <p>Nome ou logo gravado.</p>
-            <span>R$ 299,90</span><br><button class="comprar" data-item="Tábua Personalizada - R$ 299,90">Adicionar ao Carrinho</button>
-          </div>
+        <div class="filtros">
+          <input type="text" id="filtro-nome" placeholder="Buscar por nome...">
+          <select id="filtro-preco">
+            <option value="">Filtrar por preço</option>
+            <option value="0-50">Até R$ 50</option>
+            <option value="51-100">R$ 51 a R$ 100</option>
+            <option value="101-200">R$ 101 a R$ 200</option>
+            <option value="201">Acima de R$ 200</option>
+          </select>
         </div>
-      </section>
+        <div class="grid">
 
-      <section id="facas" class="categoria">
-        <h3>Facas Artesanais</h3>
-        <div class="grid">
-          <div class="produto">
-            <img src="faca1.jpg" alt="Faca de Aço Carbono">
-            <h4>Aço Carbono</h4>
-            <p>Faca artesanal com cabo de madeira nobre.</p>
-            <span>R$ 189,90</span><br><button class="comprar" data-item="Faca Aço Carbono - R$ 189,90">Adicionar ao Carrinho</button>
-          </div>
-        </div>
-      </section>
-
-      <section id="kits" class="categoria">
-        <h3>Kits Completos</h3>
-        <div class="grid">
-          <div class="produto">
-            <img src="kit1.jpg" alt="Kit completo churrasco">
-            <h4>Kit Rei do Churrasco</h4>
-            <p>Tábua + faca + garfo + estojo de couro.</p>
-            <span>R$ 449,90</span><br><button class="comprar" data-item="Kit Rei do Churrasco - R$ 449,90">Adicionar ao Carrinho</button>
-          </div>
-        </div>
+    <div class="produto" data-nome="tábua artesanal 1" data-preco="80">
+      <img src="imagens_tabuas/tabua_1.jpg" alt="Tábua Artesanal 1">
+      <h4>Tábua Artesanal 1</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 80,00</span><br><button class="comprar" data-item="Tábua Artesanal 1 - R$ 80,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 2" data-preco="45">
+      <img src="imagens_tabuas/tabua_2.jpg" alt="Tábua Artesanal 2">
+      <h4>Tábua Artesanal 2</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 45,00</span><br><button class="comprar" data-item="Tábua Artesanal 2 - R$ 45,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 3" data-preco="70">
+      <img src="imagens_tabuas/tabua_3.jpg" alt="Tábua Artesanal 3">
+      <h4>Tábua Artesanal 3</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 70,00</span><br><button class="comprar" data-item="Tábua Artesanal 3 - R$ 70,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 4" data-preco="50">
+      <img src="imagens_tabuas/tabua_4.jpg" alt="Tábua Artesanal 4">
+      <h4>Tábua Artesanal 4</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 50,00</span><br><button class="comprar" data-item="Tábua Artesanal 4 - R$ 50,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 5" data-preco="50">
+      <img src="imagens_tabuas/tabua_5.jpg" alt="Tábua Artesanal 5">
+      <h4>Tábua Artesanal 5</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 50,00</span><br><button class="comprar" data-item="Tábua Artesanal 5 - R$ 50,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 6" data-preco="45">
+      <img src="imagens_tabuas/tabua_6.jpg" alt="Tábua Artesanal 6">
+      <h4>Tábua Artesanal 6</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 45,00</span><br><button class="comprar" data-item="Tábua Artesanal 6 - R$ 45,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 7" data-preco="60">
+      <img src="imagens_tabuas/tabua_7.jpg" alt="Tábua Artesanal 7">
+      <h4>Tábua Artesanal 7</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 60,00</span><br><button class="comprar" data-item="Tábua Artesanal 7 - R$ 60,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 8" data-preco="130">
+      <img src="imagens_tabuas/tabua_8.jpg" alt="Tábua Artesanal 8">
+      <h4>Tábua Artesanal 8</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 130,00</span><br><button class="comprar" data-item="Tábua Artesanal 8 - R$ 130,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 9" data-preco="120">
+      <img src="imagens_tabuas/tabua_9.jpg" alt="Tábua Artesanal 9">
+      <h4>Tábua Artesanal 9</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 120,00</span><br><button class="comprar" data-item="Tábua Artesanal 9 - R$ 120,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 10" data-preco="55">
+      <img src="imagens_tabuas/tabua_10.jpg" alt="Tábua Artesanal 10">
+      <h4>Tábua Artesanal 10</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 55,00</span><br><button class="comprar" data-item="Tábua Artesanal 10 - R$ 55,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 11" data-preco="120">
+      <img src="imagens_tabuas/tabua_11.jpg" alt="Tábua Artesanal 11">
+      <h4>Tábua Artesanal 11</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 120,00</span><br><button class="comprar" data-item="Tábua Artesanal 11 - R$ 120,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 12" data-preco="85">
+      <img src="imagens_tabuas/tabua_12.jpg" alt="Tábua Artesanal 12">
+      <h4>Tábua Artesanal 12</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 85,00</span><br><button class="comprar" data-item="Tábua Artesanal 12 - R$ 85,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 13" data-preco="70">
+      <img src="imagens_tabuas/tabua_13.jpg" alt="Tábua Artesanal 13">
+      <h4>Tábua Artesanal 13</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 70,00</span><br><button class="comprar" data-item="Tábua Artesanal 13 - R$ 70,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 14" data-preco="50">
+      <img src="imagens_tabuas/tabua_14.jpg" alt="Tábua Artesanal 14">
+      <h4>Tábua Artesanal 14</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 50,00</span><br><button class="comprar" data-item="Tábua Artesanal 14 - R$ 50,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 15" data-preco="50">
+      <img src="imagens_tabuas/tabua_15.jpg" alt="Tábua Artesanal 15">
+      <h4>Tábua Artesanal 15</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 50,00</span><br><button class="comprar" data-item="Tábua Artesanal 15 - R$ 50,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 16" data-preco="35">
+      <img src="imagens_tabuas/tabua_16.jpg" alt="Tábua Artesanal 16">
+      <h4>Tábua Artesanal 16</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 35,00</span><br><button class="comprar" data-item="Tábua Artesanal 16 - R$ 35,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 17" data-preco="45">
+      <img src="imagens_tabuas/tabua_17.jpg" alt="Tábua Artesanal 17">
+      <h4>Tábua Artesanal 17</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 45,00</span><br><button class="comprar" data-item="Tábua Artesanal 17 - R$ 45,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 18" data-preco="40">
+      <img src="imagens_tabuas/tabua_18.jpg" alt="Tábua Artesanal 18">
+      <h4>Tábua Artesanal 18</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 40,00</span><br><button class="comprar" data-item="Tábua Artesanal 18 - R$ 40,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 19" data-preco="45">
+      <img src="imagens_tabuas/tabua_19.jpg" alt="Tábua Artesanal 19">
+      <h4>Tábua Artesanal 19</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 45,00</span><br><button class="comprar" data-item="Tábua Artesanal 19 - R$ 45,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 20" data-preco="135">
+      <img src="imagens_tabuas/tabua_20.jpg" alt="Tábua Artesanal 20">
+      <h4>Tábua Artesanal 20</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 135,00</span><br><button class="comprar" data-item="Tábua Artesanal 20 - R$ 135,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 21" data-preco="145">
+      <img src="imagens_tabuas/tabua_21.jpg" alt="Tábua Artesanal 21">
+      <h4>Tábua Artesanal 21</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 145,00</span><br><button class="comprar" data-item="Tábua Artesanal 21 - R$ 145,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 22" data-preco="180">
+      <img src="imagens_tabuas/tabua_22.jpg" alt="Tábua Artesanal 22">
+      <h4>Tábua Artesanal 22</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 180,00</span><br><button class="comprar" data-item="Tábua Artesanal 22 - R$ 180,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 23" data-preco="35">
+      <img src="imagens_tabuas/tabua_23.jpg" alt="Tábua Artesanal 23">
+      <h4>Tábua Artesanal 23</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 35,00</span><br><button class="comprar" data-item="Tábua Artesanal 23 - R$ 35,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 24" data-preco="80">
+      <img src="imagens_tabuas/tabua_24.jpg" alt="Tábua Artesanal 24">
+      <h4>Tábua Artesanal 24</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 80,00</span><br><button class="comprar" data-item="Tábua Artesanal 24 - R$ 80,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 25" data-preco="35">
+      <img src="imagens_tabuas/tabua_25.jpg" alt="Tábua Artesanal 25">
+      <h4>Tábua Artesanal 25</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 35,00</span><br><button class="comprar" data-item="Tábua Artesanal 25 - R$ 35,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 26" data-preco="60">
+      <img src="imagens_tabuas/tabua_26.jpg" alt="Tábua Artesanal 26">
+      <h4>Tábua Artesanal 26</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 60,00</span><br><button class="comprar" data-item="Tábua Artesanal 26 - R$ 60,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 27" data-preco="90">
+      <img src="imagens_tabuas/tabua_27.jpg" alt="Tábua Artesanal 27">
+      <h4>Tábua Artesanal 27</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 90,00</span><br><button class="comprar" data-item="Tábua Artesanal 27 - R$ 90,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 28" data-preco="130">
+      <img src="imagens_tabuas/tabua_28.jpg" alt="Tábua Artesanal 28">
+      <h4>Tábua Artesanal 28</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 130,00</span><br><button class="comprar" data-item="Tábua Artesanal 28 - R$ 130,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 29" data-preco="120">
+      <img src="imagens_tabuas/tabua_29.jpg" alt="Tábua Artesanal 29">
+      <h4>Tábua Artesanal 29</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 120,00</span><br><button class="comprar" data-item="Tábua Artesanal 29 - R$ 120,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 30" data-preco="130">
+      <img src="imagens_tabuas/tabua_30.jpg" alt="Tábua Artesanal 30">
+      <h4>Tábua Artesanal 30</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 130,00</span><br><button class="comprar" data-item="Tábua Artesanal 30 - R$ 130,00">Adicionar ao Carrinho</button>
+    </div>
+    
+    <div class="produto" data-nome="tábua artesanal 31" data-preco="45">
+      <img src="imagens_tabuas/tabua_31.jpg" alt="Tábua Artesanal 31">
+      <h4>Tábua Artesanal 31</h4>
+      <p>Modelo exclusivo, acabamento manual. Ideal para cortes e servir com estilo.</p>
+      <span>R$ 45,00</span><br><button class="comprar" data-item="Tábua Artesanal 31 - R$ 45,00">Adicionar ao Carrinho</button>
+    </div>
+    </div>
       </section>
     </main>
-
-    <section id="contato" class="contato">
-      <h3>Fale Conosco</h3>
-      <p>Peça pelo WhatsApp ou preencha o formulário:</p>
-      <a class="whatsapp" href="https://wa.me/27997540093" target="_blank">📲 Chamar no WhatsApp</a>
-    </section>
-
-    <footer>
-      <div class="footer-grid">
-        <div>
-          <h4>Redes Sociais</h4>
-          <a href="#"><img src="imagens/instagram.png" alt="Instagram"></a>
-          <a href="#"><img src="imagens/facebook.png" alt="Facebook"></a>
-          <a href="#"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
-        </div>
-        <div>
-          <h4>Endereço</h4>
-          <p>Rua do Churrasco, 123 - São Paulo - SP</p>
-        </div>
-        <div>
-          <h4>Links</h4>
-          <ul>
-            <li><a href="#tabuas">Tábuas</a></li>
-            <li><a href="#facas">Facas</a></li>
-            <li><a href="#kits">Kits</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="copy">&copy; 2025 RB-ARTES. Todos os direitos reservados.</p>
-    </footer>
-
+    <footer><p>&copy; 2025 RB-ARTES. Todos os direitos reservados.</p></footer>
     <div class="carrinho-flutuante" id="carrinho">
       <h4>Seu Carrinho</h4>
       <ul id="lista-carrinho"></ul>
       <button onclick="finalizarCompra()">Finalizar Pedido</button>
     </div>
-
     <div id="formulario-endereco">
       <h4>Informe seu Endereço</h4>
       <input id="nome" placeholder="Nome completo">
@@ -174,16 +262,14 @@
       <input id="telefone" placeholder="Telefone">
       <button onclick="enviarWhatsapp()">Enviar Pedido via WhatsApp</button>
     </div>
-
     <script>
       const carrinho = [];
-      document.querySelectorAll('.comprar').forEach(btn => {
-        btn.addEventListener('click', () => {
-          carrinho.push(btn.getAttribute('data-item'));
+      document.addEventListener('click', e => {
+        if (e.target.classList.contains('comprar')) {
+          carrinho.push(e.target.getAttribute('data-item'));
           atualizarCarrinho();
-        });
+        }
       });
-
       function atualizarCarrinho() {
         const lista = document.getElementById('lista-carrinho');
         lista.innerHTML = '';
@@ -194,22 +280,38 @@
         });
         document.getElementById('carrinho').style.display = 'block';
       }
-
       function finalizarCompra() {
         document.getElementById('formulario-endereco').style.display = 'block';
       }
-
       function enviarWhatsapp() {
         const nome = document.getElementById('nome').value;
         const endereco = document.getElementById('endereco').value;
         const telefone = document.getElementById('telefone').value;
         const pedido = carrinho.join(', ');
-
-        const mensagem = `Olá! Meu nome é ${nome}.\nPedido: ${pedido}\nEndereço: ${endereco}\nTelefone: ${telefone}`;
+        const mensagem = `Olá! Meu nome é ${nome}.
+Pedido: ${pedido}
+Endereço: ${endereco}
+Telefone: ${telefone}`;
         const url = `https://wa.me/27997540093?text=${encodeURIComponent(mensagem)}`;
         window.open(url, '_blank');
+      }
+      document.getElementById('filtro-nome').addEventListener('input', filtrarProdutos);
+      document.getElementById('filtro-preco').addEventListener('change', filtrarProdutos);
+      function filtrarProdutos() {
+        const nome = document.getElementById('filtro-nome').value.toLowerCase();
+        const faixa = document.getElementById('filtro-preco').value;
+        document.querySelectorAll('.produto').forEach(produto => {
+          const nomeProduto = produto.getAttribute('data-nome');
+          const precoProduto = parseFloat(produto.getAttribute('data-preco'));
+          let mostrar = nomeProduto.includes(nome);
+          if (faixa === "0-50") mostrar = mostrar && precoProduto <= 50;
+          else if (faixa === "51-100") mostrar = mostrar && precoProduto > 50 && precoProduto <= 100;
+          else if (faixa === "101-200") mostrar = mostrar && precoProduto > 100 && precoProduto <= 200;
+          else if (faixa === "201") mostrar = mostrar && precoProduto > 200;
+          produto.style.display = mostrar ? "block" : "none";
+        });
       }
     </script>
   </div>
 </body>
-</html>
+        </html>
