@@ -1,6 +1,6 @@
-/* Fundo com imagem de madeira */
+/* Fundo com imagem e cor rajada (degradê sobreposto) */
 body {
-  background-image: url('imagens/fundo-madeira.jpg');
+  background-image: linear-gradient(135deg, rgba(60, 40, 20, 0.8), rgba(30, 20, 10, 0.8)), url('imagens/fundo-madeira.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -22,6 +22,7 @@ header {
   text-align: center;
 }
 
+/* Menu */
 header nav ul {
   display: flex;
   justify-content: center;
@@ -48,6 +49,7 @@ header nav ul li a {
   margin-bottom: 10px;
 }
 
+/* Seção de Categoria */
 .categoria {
   padding: 20px;
   color: #fff;
@@ -58,19 +60,45 @@ header nav ul li a {
   margin-bottom: 10px;
 }
 
+/* Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+  width: 200px;
+}
+
+/* Grade de Produtos */
 .grid {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
+/* Card do Produto */
 .produto {
-  background-color: #222;
-  padding: 15px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 45%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   text-align: center;
+  transition: transform 0.2s ease;
+}
+.produto:hover {
+  transform: scale(1.02);
 }
 
 .produto img {
@@ -133,7 +161,7 @@ button.comprar:hover {
   cursor: pointer;
 }
 
-/* Formulário */
+/* Formulário flutuante */
 #formulario-endereco {
   display: none;
   position: fixed;
@@ -222,7 +250,7 @@ footer p.copy {
   cursor: pointer;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
   .grid {
     flex-direction: column;
@@ -236,3 +264,16 @@ footer p.copy {
     gap: 10px;
   }
 }
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto {
+    width: 90%;
+  }
+}
+
+  
