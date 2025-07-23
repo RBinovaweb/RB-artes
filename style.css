@@ -1,3 +1,45 @@
+.social-buttons {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.social-buttons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.social-buttons a img {
+  width: 22px;
+  height: 22px;
+  filter: invert(20%);
+}
+
+.social-buttons a:hover {
+  background-color: #ddd;
+  transform: scale(1.1);
+}
+
+/* Cores específicas (opcional) */
+.social-buttons a.facebook:hover { background-color: #3b5998; }
+.social-buttons a.whatsapp:hover { background-color: #25D366; }
+.social-buttons a.instagram:hover { background-color: #C13584; }
+.social-buttons a.tiktok:hover { background-color: #010101; }
+
+.social-buttons a.facebook:hover img,
+.social-buttons a.whatsapp:hover img,
+.social-buttons a.instagram:hover img,
+.social-buttons a.tiktok:hover img {
+  filter: invert(1);
+}
 /* Fundo com imagem e cor rajada (degradê sobreposto) */
 body {
   background-image: linear-gradient(135deg, rgba(60, 40, 20, 0.8), rgba(30, 20, 10, 0.8)), url('imagens/fundo-madeira.jpg');
