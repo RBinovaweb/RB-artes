@@ -175,20 +175,45 @@
 </head>
 <body>
   <!-- Botões de redes sociais -->
-  <div class="redes-sociais">
-    <a href="https://wa.me/27997540093" target="_blank" title="WhatsApp">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
-    </a>
-    <a href="https://www.facebook.com/rbartes" target="_blank" title="Facebook">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
-    </a>
-    <a href="https://www.tiktok.com/@rbartes" target="_blank" title="TikTok">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
-    </a>
-    <a href="https://www.kwai.com/@rbartes" target="_blank" title="Kwai">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/kwai.svg" alt="Kwai">
-    </a>
-  </div>
+  <!-- Redes sociais coloridas -->
+<div class="redes-sociais">
+  <a href="https://wa.me/27997540093" target="_blank" title="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.facebook.com/rbartes" target="_blank" title="Facebook">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+  </a>
+  <a href="https://www.instagram.com/rbartes" target="_blank" title="Instagram">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+  <a href="https://www.tiktok.com/@rbartes" target="_blank" title="TikTok">
+    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
+  </a>
+</div>
+
+<style>
+  .redes-sociais {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+  }
+
+  .redes-sociais a img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 0 2px #00000066);
+  }
+
+  .redes-sociais a:hover img {
+    transform: scale(1.2);
+  }
+</style>
+
 
   <!-- Resto do seu HTML permanece o mesmo -->
   <!-- Cole o restante do HTML a partir de <div class="fundo">... até o final como você já mandou -->
@@ -494,14 +519,4 @@ Telefone: ${telefone}`;
           const nomeProduto = produto.getAttribute('data-nome');
           const precoProduto = parseFloat(produto.getAttribute('data-preco'));
           let mostrar = nomeProduto.includes(nome);
-          if (faixa === "0-50") mostrar = mostrar && precoProduto <= 50;
-          else if (faixa === "51-100") mostrar = mostrar && precoProduto > 50 && precoProduto <= 100;
-          else if (faixa === "101-200") mostrar = mostrar && precoProduto > 100 && precoProduto <= 200;
-          else if (faixa === "201") mostrar = mostrar && precoProduto > 200;
-          produto.style.display = mostrar ? "block" : "none";
-        });
-      }
-    </script>
-  </div>
-</body>
-                              </html>
+          if (fai
