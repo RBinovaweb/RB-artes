@@ -5,223 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RB-ARTES - Tábuas Artesanais</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
-      padding: 0;
-    }
-
-    .redes-sociais {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 1000;
-    }
-
-    .redes-sociais a img {
-      width: 32px;
-      height: 32px;
-      transition: transform 0.3s;
-      filter: drop-shadow(0 0 2px #000000aa);
-    }
-
-    .redes-sociais a:hover img {
-      transform: scale(1.2);
-    }
-
-    .fundo {
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: white;
-    }
-
-    .banner {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .categoria {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .filtros {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-      justify-content: center;
-    }
-
-    .filtros input, .filtros select {
-      padding: 10px;
-      font-size: 16px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .produto {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 10px;
-      text-align: center;
-      box-shadow: 0 0 5px #00000022;
-    }
-
-    .produto img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-    }
-
-    .produto h4 {
-      margin: 10px 0 5px;
-    }
-
-    .produto p {
-      font-size: 14px;
-      color: #555;
-    }
-
-    .produto span {
-      font-weight: bold;
-      display: block;
-      margin: 5px 0;
-    }
-
-    .comprar {
-      background-color: #28a745;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .comprar:hover {
-      background-color: #218838;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #222;
-      color: white;
-    }
-
-    .carrinho-flutuante {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      background-color: white;
-      border: 1px solid #ccc;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00000033;
-      display: none;
-      z-index: 999;
-    }
-
-    #formulario-endereco {
-      display: none;
-      position: fixed;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00000044;
-      z-index: 999;
-    }
-
-    #formulario-endereco input {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 10px;
-    }
-
-    #formulario-endereco button {
-      background-color: #25D366;
-      color: white;
-      border: none;
-      padding: 10px;
-      width: 100%;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    #formulario-endereco button:hover {
-      background-color: #1ebe5d;
-    }
-  </style>
 </head>
 <body>
-  <!-- Botões de redes sociais -->
-  <!-- Redes sociais coloridas -->
-<div class="redes-sociais">
-  <a href="https://wa.me/27997540093" target="_blank" title="WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-  </a>
-  <a href="https://www.facebook.com/rbartes" target="_blank" title="Facebook">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-  </a>
-  <a href="https://www.instagram.com/rbartes" target="_blank" title="Instagram">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-  </a>
-  <a href="https://www.tiktok.com/@rbartes" target="_blank" title="TikTok">
-    <img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="TikTok">
-  </a>
-</div>
-
-<style>
-  .redes-sociais {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    z-index: 1000;
-  }
-
-  .redes-sociais a img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-    filter: drop-shadow(0 0 2px #00000066);
-  }
-
-  .redes-sociais a:hover img {
-    transform: scale(1.2);
-  }
-</style>
-
-
-  <!-- Resto do seu HTML permanece o mesmo -->
-  <!-- Cole o restante do HTML a partir de <div class="fundo">... até o final como você já mandou -->
-
-</body>
-</html>
-
-  
   <div class="fundo">
     <header>
       <h1>🔥 RB ARTES🔪</h1>
@@ -519,4 +304,14 @@ Telefone: ${telefone}`;
           const nomeProduto = produto.getAttribute('data-nome');
           const precoProduto = parseFloat(produto.getAttribute('data-preco'));
           let mostrar = nomeProduto.includes(nome);
-          if (fai
+          if (faixa === "0-50") mostrar = mostrar && precoProduto <= 50;
+          else if (faixa === "51-100") mostrar = mostrar && precoProduto > 50 && precoProduto <= 100;
+          else if (faixa === "101-200") mostrar = mostrar && precoProduto > 100 && precoProduto <= 200;
+          else if (faixa === "201") mostrar = mostrar && precoProduto > 200;
+          produto.style.display = mostrar ? "block" : "none";
+        });
+      }
+    </script>
+  </div>
+</body>
+        </html>
