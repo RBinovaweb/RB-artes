@@ -1,3 +1,13 @@
+main h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .social-buttons {
   display: flex;
   gap: 15px;
